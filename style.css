@@ -1,12 +1,28 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+--card-size: 349px;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+
 }
+
 .cards img {
-  width: 392px;
-  height: 392px;
+  position: relative;
+  width: var(--card-size);
+  height: var(--card-size);
+  z-index: 1;
 }
+
 .cards .cards-align {
   display: flex;
   flex-direction: row;
@@ -14,22 +30,43 @@
   justify-content: center;
   position: relative;
   text-align: center;
+  gap: 30px; 
 }
+
+
 .cards .cards-align div {
-  padding: 10px;
   position: relative;
   top: 0;
   left: 0;
 }
-.cards .cards-align div:hover {
-  background: linear-gradient(0.25turn, #3f87a6, #f69d3c, 0.3);
+
+/* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
+.cards .cards-align a:hover {
+  
 }
-.cards .cards-align div .image-logo {
+
+
+.cards .cards-align .black-opacity .image-logo{
   position: absolute;
-  top: 12em;
-  left: 10em;
-  width: 90px;
-  height: 40px;
+  z-index: 3;
+  width: 120px;
+  height: 81px;
+  align-self: center;
+  top: 40%;
+  left: 35%;
+
+}
+
+.cards .cards-align .black-opacity{
+position: relative;
+  z-index: 2;
+  background-color: #000000;
+  height: var(--card-size);  
+  width: var(--card-size);
+}
+
+.black-opacity img {
+  opacity: 0.6; 
 }
 
 /*# sourceMappingURL=style.css.map */
