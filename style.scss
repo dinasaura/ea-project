@@ -1,47 +1,92 @@
-$card-size: 349px;
+$color_1: black;
+$background-color_1: linear;
+$background-color_2: #000000;
 
-.cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    img {
-        position: relative;
-        width: var($card-size);
-        height: var($card-size);
-        z-index: 1;
-
-    }
-
-    .cards-align {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: relative;
-        text-align: center;
-        gap: 30px;
-
-        .black-opacity {
-            position: relative;
-            z-index: 2;
-            background-color: #000000;
-            height: var(--card-size);
-            width: var(--card-size);
-
-            .image-logo {
-                position: absolute;
-                z-index: 3;
-                width: 120px;
-                height: 81px;
-                align-self: center;
-                top: 40%;
-                left: 35%;
-            }
-        }
-        .button {
-            button {}
-        }
-    }
+/* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
+/* aggiunto bottone  */
+/* dobbiamo trovare il font giusto sul sito perché è 
+ sbagliato e importarlo nel file */
+/* ho sostituito il button con l'a, forse ho fatto na cazzata */
+/* però funziona */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
+&:root {
+	--card-size: 349px;
+}
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	img {
+		position: relative;
+		width: var(--card-size);
+		height: var(--card-size);
+		z-index: 1;
+	}
+	.cards-align {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		position: relative;
+		text-align: center;
+		gap: 30px;
+		div {
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+		a {
+			&:hover {
+				background-color: $background-color_1;
+			}
+		}
+		.black-opacity {
+			.image-logo {
+				position: absolute;
+				z-index: 3;
+				width: 120px;
+				height: 81px;
+				align-self: center;
+				top: 40%;
+				left: 35%;
+			}
+			position: relative;
+			z-index: 2;
+			background-color: $background-color_2;
+			height: var(--card-size);
+			width: var(--card-size);
+		}
+	}
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 70px;
+		border: 1.5px solid black;
+		border-radius: 3px;
+		height: 60px;
+		width: 160px;
+		margin-bottom: 30px;
+		a {
+			font-size: 18px;
+			text-decoration: none;
+			color: $color_1;
+			font-weight: lighter;
+		}
+		&:hover {
+			transform: scale(1.1);
+			a {
+				transform: scale(0.91);
+			}
+		}
+	}
+}
+.black-opacity {
+	img {
+		opacity: 0.6;
+	}
+}
