@@ -1,0 +1,69 @@
+
+/* Aggiunto (perchè obbligatorio) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Aggiunto root per comodità */
+:root {
+--card-size: 349px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Ridimensionate le card come quelle reali sul sito */
+.cards img {
+  width: var(--card-size);
+  height: var(--card-size);
+  
+}
+
+/* aggiunto gap, se non abbastanza, aumentarlo */
+.cards .cards-align {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  gap: 30px; 
+}
+
+/* tolto il padding perché bisognava usare gap sopra per spostare le cards */
+.cards .cards-align div {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
+.cards .cards-align div:hover {
+  background: linear-gradient(0.25turn, #3f87a6, #f69d3c, 0.3);
+}
+
+/* visto che ho aggiunto l'svg dobbiamo capire come fare per metterlo in mezzo */
+.cards .cards-align div .image-logo{
+  position: absolute;
+  top: 12em;
+  left: 10em;
+  width: 90px;
+  height: 40px;
+}
+
+/*  Aggiunto l'opacità nera nei box delle immagini */
+.black-opacity {
+  background-color: #000000;
+  height: var(--card-size);  /* aggiunto il width e l'height per togliere il bordo del nero */
+  width: var(--card-size);
+
+  
+}
+
+.black-opacity img {
+  opacity: 0.7; /* se è troppo scuro o chiaro, cambiamo */
+}
