@@ -42,6 +42,7 @@
 
 /* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
 .cards .cards-align a:hover {
+  background-color: linear;
   
 }
 
@@ -68,5 +69,39 @@ position: relative;
 .black-opacity img {
   opacity: 0.6; 
 }
+/* aggiunto bottone  */
+.cards .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  border: 1.5px solid black;
+  border-radius: 3px;
+  height: 60px;
+  width: 160px; 
+  margin-bottom: 30px;
+}
+ /* dobbiamo trovare il font giusto sul sito perché è 
+ sbagliato e importarlo nel file */
+.cards .button a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+  
+}
+/* ho sostituito il button con l'a, forse ho fatto na cazzata */
+/* però funziona */
+.cards .button:hover {
+  transform: scale(1.1);
+}
+
+.cards .button:hover a {
+  transform: scale(0.91);
+}
+
+/* scusa se sto lavorando sul file css, ma ho scoperto
+che il problema che ci stava dando era perché
+mettevamo sass per qualche assurdo motivo */
 
 /*# sourceMappingURL=style.css.map */
