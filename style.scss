@@ -1,0 +1,36 @@
+.cards{
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    img{
+        width: 392px;
+        height: 392px;
+
+    }
+    .cards-align{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        div{
+           padding: 10px; 
+           position: relative;
+           top: 0;
+           left: 0;
+           &:hover{
+            background: linear-gradient(0.25turn, #3f87a6, #f69d3c, 0.3);
+        }
+        
+
+           .image-logo{
+            position: absolute;
+            top: 12em;
+            left: 10em;
+            width: 90px;
+            height: 40px;
+        }
+        }   
+    }
+}

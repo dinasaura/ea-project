@@ -18,9 +18,10 @@
 
 /* Ridimensionate le card come quelle reali sul sito */
 .cards img {
+  position: relative;
   width: var(--card-size);
   height: var(--card-size);
-  
+  z-index: 1;
 }
 
 /* aggiunto gap, se non abbastanza, aumentarlo */
@@ -42,18 +43,25 @@
 }
 
 /* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
-.cards .cards-align div:hover {
-  background: linear-gradient(0.25turn, #3f87a6, #f69d3c, 0.3);
+.cards .cards-align a:hover {
+  background: linear-gradient(0.25turn, #3f87a6, #f69d3c);
 }
 
 /* visto che ho aggiunto l'svg dobbiamo capire come fare per metterlo in mezzo */
-.cards .cards-align div .image-logo{
+.cards .cards-align .black-opacity .image-logo{
   position: absolute;
-  top: 12em;
-  left: 10em;
-  width: 90px;
-  height: 40px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  
 }
+
+.cards .cards-align .black-opacity{
+position: relative;
+  z-index: 2;
+}
+
+
 
 /*  Aggiunto l'opacità nera nei box delle immagini */
 .black-opacity {
@@ -65,5 +73,5 @@
 }
 
 .black-opacity img {
-  opacity: 0.7; /* se è troppo scuro o chiaro, cambiamo */
+  opacity: 0.6; /* se è troppo scuro o chiaro, cambiamo */
 }

@@ -1,0 +1,35 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cards img {
+  width: 392px;
+  height: 392px;
+}
+.cards .cards-align {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.cards .cards-align div {
+  padding: 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.cards .cards-align div:hover {
+  background: linear-gradient(0.25turn, #3f87a6, #f69d3c, 0.3);
+}
+.cards .cards-align div .image-logo {
+  position: absolute;
+  top: 12em;
+  left: 10em;
+  width: 90px;
+  height: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
