@@ -84,10 +84,11 @@ position: relative;
  /* dobbiamo trovare il font giusto sul sito perché è 
  sbagliato e importarlo nel file */
 .cards .button a {
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
-  color: black;
+  color: #161616;
   font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   
 }
 /* ho sostituito il button con l'a, forse ho fatto na cazzata */

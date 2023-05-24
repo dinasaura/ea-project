@@ -1,4 +1,4 @@
-$color_1: black;
+$color_1: #161616;
 $background-color_1: linear;
 $background-color_2: #000000;
 
@@ -9,6 +9,7 @@ $background-color_2: #000000;
 }
 &:root {
 	--card-size: 349px;
+
 }
 .cards {
 	display: flex;
@@ -66,10 +67,11 @@ $background-color_2: #000000;
 		width: 160px;
 		margin-bottom: 30px;
 		a {
-			font-size: 18px;
+			font-size: 16px;
 			text-decoration: none;
 			color: $color_1;
 			font-weight: lighter;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
 		}
 		&:hover {
 			transform: scale(1.1);
