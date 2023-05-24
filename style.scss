@@ -1,88 +1,96 @@
-$color_1: #161616;
-$background-color_1: linear;
-$background-color_2: #000000;
-
+@charset "UTF-8";
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-&:root {
-	--card-size: 349px;
 
+:root {
+  --card-size: 349px;
 }
+
 .cards {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	img {
-		position: relative;
-		width: var(--card-size);
-		height: var(--card-size);
-		z-index: 1;
-	}
-	.cards-align {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		position: relative;
-		text-align: center;
-		gap: 30px;
-		div {
-			position: relative;
-			top: 0;
-			left: 0;
-		}
-		a {
-			&:hover {
-				background-color: $background-color_1;
-			}
-		}
-		.black-opacity {
-			.image-logo {
-				position: absolute;
-				z-index: 3;
-				width: 120px;
-				height: 81px;
-				align-self: center;
-				top: 40%;
-				left: 35%;
-			}
-			position: relative;
-			z-index: 2;
-			background-color: $background-color_2;
-			height: var(--card-size);
-			width: var(--card-size);
-		}
-	}
-	.button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 70px;
-		border: 1.5px solid black;
-		border-radius: 3px;
-		height: 60px;
-		width: 160px;
-		margin-bottom: 30px;
-		a {
-			font-size: 16px;
-			text-decoration: none;
-			color: $color_1;
-			font-weight: lighter;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-		}
-		&:hover {
-			transform: scale(1.1);
-			a {
-				transform: scale(0.91);
-			}
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.black-opacity {
-	img {
-		opacity: 0.6;
-	}
+
+.cards img {
+  position: relative;
+  width: var(--card-size);
+  height: var(--card-size);
+  z-index: 1;
 }
+
+.cards .cards-align {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  gap: 30px;
+}
+
+.cards .cards-align div {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
+.cards .cards-align a:hover {
+  background-color: linear;
+}
+
+.cards .cards-align .black-opacity .image-logo {
+  position: absolute;
+  z-index: 3;
+  width: 120px;
+  height: 81px;
+  align-self: center;
+  top: 40%;
+  left: 35%;
+}
+
+.cards .cards-align .black-opacity {
+  position: relative;
+  z-index: 2;
+  background-color: #000000;
+  height: var(--card-size);
+  width: var(--card-size);
+}
+
+.black-opacity img {
+  opacity: 0.6;
+}
+
+.cards .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  border: 1.5px solid black;
+  border-radius: 3px;
+  height: 60px;
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.cards .button a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #161616;
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cards .button:hover {
+  transform: scale(1.1);
+}
+
+.cards .button:hover a {
+  transform: scale(0.91);
+}
+
+/*# sourceMappingURL=style.scss.map */
