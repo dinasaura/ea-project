@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --card-size: 349px;
 }
@@ -37,7 +31,6 @@
   left: 0;
 }
 
-/* questo non funziona, dovremmo modificare aggiungendo l'a che contiene l'img per l'hover */
 .cards .cards-align a:hover {
   background-color: linear;
 }
@@ -62,34 +55,4 @@
 
 .black-opacity img {
   opacity: 0.6;
-}
-
-.cards .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-  border: 1.5px solid black;
-  border-radius: 3px;
-  height: 60px;
-  width: 160px;
-  margin-bottom: 30px;
-}
-
-.cards .button a {
-  font-size: 16px;
-  text-decoration: none;
-  color: #161616;
-  font-weight: lighter;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.cards .button:hover {
-  transform: scale(1.1);
-}
-
-.cards .button:hover a {
-  transform: scale(0.91);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

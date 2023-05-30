@@ -1,0 +1,58 @@
+:root {
+    --card-size: 349px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards img {
+    position: relative;
+    width: var(--card-size);
+    height: var(--card-size);
+    z-index: 1;
+}
+
+.cards .cards-align {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    gap: 30px;
+}
+
+.cards .cards-align div {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.cards .cards-align a:hover {
+    background-color: linear;
+}
+
+.cards .cards-align .black-opacity .image-logo {
+    position: absolute;
+    z-index: 3;
+    width: 120px;
+    height: 81px;
+    align-self: center;
+    top: 40%;
+    left: 35%;
+}
+
+.cards .cards-align .black-opacity {
+    position: relative;
+    z-index: 2;
+    background-color: #000000;
+    height: var(--card-size);
+    width: var(--card-size);
+}
+
+.black-opacity img {
+    opacity: 0.6;
+}
